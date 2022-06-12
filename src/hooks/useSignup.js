@@ -27,6 +27,7 @@ export const useSignup = () => {
       // displayName update
       await res.user.updateProfile({ displayName });
 
+      // context -> state update
       dispatch({ type: "LOGIN", payload: res.user });
 
       if (!isCancelled) {
